@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// **** VARIABLES ****
+$ly-min-width: 1480px;
+$ly-max-width: 1920px;
+
+// **** COLOR PALLETE ****
+$color-sub: #181459; //짙은 남색
+$color-damu: #211545; //짙은 보라색
+
+// **** z-index ****
+$z-header: 500; //헤더
+$z-notice-popup: 800; //노티 팝업
+
+$z-visual-dim: 5; //비주얼 딤
+$z-visual-title: 10; //비주얼 타이틀
+$z-visual-text: 30; //비주얼 오버랩 텍스트
+$z-visual-slide-pagination: 10; //비주얼 슬라이드 페이지네이션
+
+$z-service-slide-navigation: 5;
+
+$z-about-story-title: 1;
+$z-about-all-title: 1;
+$z-service-slide-container: 1; //서비스 슬라이드 영역 텍스트
+$z-popup-dim: 1000;
+$z-popup-area: 1001;
+
+// **** path ****
+$path-image: "../images/";
+$path-font: "../fonts/";
+
+// **** font-weight ****
+$fw-b: 600;
+$fw-eb: 800;

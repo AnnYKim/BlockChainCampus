@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+// **** Animations
+
+// **** fadein animation ****
+
+.animation-fade,
+.animation-hide {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s, opacity 0.8s;
+  transition-timing-function: easeInBack;
+}
+
+.animation-fade.animation-show,
+.animation-hide.animation-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s, opacity 0.8s;
+  transition-timing-function: easeInBack;
+}
+
+@mixin popupFadeIn($duration: 0.4s, $delay: 0.1s) {
+  opacity: 1;
+  transition: opacity #{$duration} #{$delay};
+}
+
+@mixin popupFadeOut($duration: 0.4s, $delay: 0.1s) {
+  opacity: 0;
+  transition: opacity #{$duration} #{$delay};
+}
+
+// @include keyframes(loading) {
+//   50% {
+//     transform: scaleX(1);
+//   }
+// }
+
+$randomY_1: random(150);
+$randomX_1: random(70);
+$randomY_2: random(120);
+$randomX_2: random(80);
+
+@include keyframes(loading) {
+  100% {
+    left: 100%;
+  }
+}
+
+@include keyframes(deco_floating_1) {
+  50% {
+    transform: translateY(-#{$randomY_1}px) translateX(-#{$randomX_1}px);
+  }
+}
+
+@include keyframes(deco_floating_2) {
+  50% {
+    transform: translateY(-#{$randomY_2}px) translateX(-#{$randomX_2}px);
+  }
+}
