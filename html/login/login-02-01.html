@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>사용자 정보 입력 &middot; BLOCKCHAIN CAMPUS</title>
+
+  <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <!-- 로그인 화면 -->
+  <div id="wrapper" class="user-infomration">
+
+    <header class="page-header">
+      <h1 class="page-title">사용자 정보 입력</h1>
+    </header>
+
+    <div class="page-body">
+      <div class="contents">
+
+        <div class="tab">
+          <button class="tab-item active">학생</button>
+          <!-- 
+            활성화된 tab-item에게 active 클래스를 추가해 주세요.
+          -->
+          <button class="tab-item">교직원</button>
+        </div>
+
+
+        <div class="input-item input-row">
+          <p class="input-title">과정</p>
+          <div class="radio-wrap radio-type01">
+            <div class="radio-item">
+              <input type="radio" name="radio-graduate" id="radio-graduate-0" class="radio-style01" />
+              <label for="radio-graduate-0" class="radio-label">대학</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-graduate" id="radio-graduate-1" class="radio-style01" />
+              <label for="radio-graduate-1" class="radio-label">대학원</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-item">
+          <p class="input-title">학부/학과</p>
+          <div class="select-item">
+            <input type="text" placeholder="소속된 학부 또는 학과를 선택하세요." class="select-style01" readonly="readonly" />
+            <!-- 스타일용 input입니다. 유저가 선택 시, 별도의 셀렉트박스 등을 호출해 주세요.-->
+            <p class="input-item-error error-style01">학부 또는 학과를 선택해주세요.</p>
+          </div>
+          <select name="" id="" class="display-none">
+            <option value="">학과1</option>
+            <option value="">학과2</option>
+            <option value="">학부1</option>
+            <option value="">학부2</option>
+          </select>
+          <!-- 이 select는 숨김처리 되어 있습니다. -->
+        </div>
+
+        <div class="input-item">
+          <p class="input-title">학번</p>
+          <input type="number" placeholder="학번을 입력하세요." class="input-style01" />
+          <p class="input-item-error error-style01">정확한 학번을 입력해주세요.</p>
+        </div>
+
+        <div class="input-item">
+          <p class="input-title">학년</p>
+          <div class="radio-wrap radio-type02">
+            <div class="radio-item">
+              <input type="radio" name="radio-grade" id="radio-grade-1" />
+              <label for="radio-grade-1" class="radio-label">1</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-grade" id="radio-grade-2" />
+              <label for="radio-grade-2" class="radio-label">2</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-grade" id="radio-grade-3" />
+              <label for="radio-grade-3" class="radio-label">3</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-grade" id="radio-grade-4" />
+              <label for="radio-grade-4" class="radio-label">4</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="input-item input-row">
+          <p class="input-title">성별</p>
+          <div class="radio-wrap radio-type01">
+            <div class="radio-item">
+              <input type="radio" name="radio-gender" id="radio-gender-m" class="radio-style01" />
+              <label for="radio-gender-m" class="radio-label">남자</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" name="radio-gender" id="radio-gender-w" class="radio-style01" />
+              <label for="radio-gender-w" class="radio-label">여자</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-bottom-area">
+          <button class="button-style01 size-full">입력 완료</button>
+        </div>
+
+      </div>
+      <!-- //end of .contents -->
+    </div>
+    <!-- //end of .page-body -->
+
+  </div>
+</body>

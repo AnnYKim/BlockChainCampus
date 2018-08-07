@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// **** login page
+
+.login {
+  //[*] 로그인 페이지
+
+  .logo {
+    //블록체인 캠퍼스 로고
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .login-area {
+    //로그인 인풋 영역
+    position: relative;
+
+    .login-area-email-info {
+      //기본 이메일 주소
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: blue;
+    }
+  }
+
+  .login-area-error {
+    //로그인시 나타나는 에러 메시지
+  }
+
+  .button-wrap {
+  }
+
+  .login-univ-logo {
+    //최하단 학교 로고
+    text-align: center;
+  }
+}
+
+.user-information {
+  //[*] 사용자 정보 입력 페이지
+}
+
+.wallet-setting {
+  //[*] 지갑 설정 페이지
+  .wallet-info {
+    text-align: center;
+    color: chartreuse;
+    font-size: 1.3rem;
+    margin: 2.4rem 0;
+  }
+}

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // **** MIXIN SCSS (nykim@nykim.net)
-// **** Last Modified : 2018-07-11
+// **** Last Modified : 2018-08-06
 
 // 폰트
 @mixin font-main($weight: 400) {
@@ -9,7 +9,7 @@
   font-weight: $weight;
 }
 @mixin font-sub($weight: 300) {
-  font-family: #{$font-gotham}, AppleGothic, sans-serif, Helvetica;
+  font-family: "돋움", AppleGothic, sans-serif, Helvetica;
   font-weight: $weight;
 }
 
@@ -170,6 +170,7 @@
   -webkit-flex-grow: $grow;
   -moz-flex-grow: $grow;
   -ms-flex-grow: $grow;
+  -ms-flex-positive: $grow;
   flex-grow: $grow;
 }
 
@@ -180,6 +181,7 @@
   -webkit-flex-shrink: $shrink;
   -moz-flex-shrink: $shrink;
   -ms-flex-shrink: $shrink;
+  -ms-flex-negative: $shrink;
   flex-shrink: $shrink;
 }
 
@@ -259,4 +261,20 @@
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+// placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
 }

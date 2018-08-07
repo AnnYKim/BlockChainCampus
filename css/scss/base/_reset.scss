@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-// RESET CSS (nykim@nykim.net)
-// Last Modified : 2018-07-09
+// **** Reset CSS
 
 html,
 body,
@@ -160,15 +159,21 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  font-size: 62.5%; //1em = 10px로 설정
 }
 
 body {
+  position: relative;
+  min-height: 100%;
   overflow-y: scroll;
   @include font-main;
   color: #212529;
   text-align: left;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 0.5rem;
   background-color: #fff;
+}
+
+#wrapper {
+  position: relative;
 }

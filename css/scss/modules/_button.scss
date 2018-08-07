@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// **** Button style
+
+// 레이아웃 정의
+
+button {
+  font-size: 1.4rem;
+  padding: 8px 14px;
+}
+
+.button-style01 {
+  border: 1px solid red;
+  border-radius: 12px;
+}
+
+.button-style02 {
+  border: 1px solid #aaa;
+  color: #aaa;
+  border-radius: 12px;
+
+  &.active {
+    background-color: navy;
+  }
+}
+
+// 사이즈 정의
+
+.size-full {
+  width: 100%;
+}
