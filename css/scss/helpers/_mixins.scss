@@ -4,7 +4,7 @@
 // **** Last Modified : 2018-08-06
 
 // 폰트
-@mixin font-main($weight: 400) {
+@mixin font-main($weight: 600) {
   font-family: "NanumSquare", AppleGothic, sans-serif, Helvetica;
   font-weight: $weight;
 }

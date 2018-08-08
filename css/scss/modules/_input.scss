@@ -35,24 +35,23 @@
 
 .input-style01 {
   height: 4rem;
-  font-size: 1.5rem;
-  line-height: 4rem;
   padding: 0 1rem;
+  line-height: 4rem;
+  font-size: 1.4rem;
   border-radius: 8px; //TODO: 임시
   background-color: $color-input;
 
   @include placeholder {
     color: $color-placeholder;
+    font-size: 1.4rem;
   }
 }
 
 .input-style02 {
   @extend .input-style01;
-  border: 1px solid $color-blue;
-  background-color: rgba(255, 255, 255, 0.15);
 
   @include placeholder {
-    color: $color-placeholder;
+    color: $color-placeholder2;
   }
 }
 
@@ -105,8 +104,10 @@
 
   .radio-label {
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     height: 4rem;
+    color: $color-black;
+    font-weight: $fw-b;
     text-align: center;
     line-height: 3.6rem;
     border-radius: 8px; //TODO: 임시
@@ -131,14 +132,14 @@
 .select-item {
   position: relative;
 
-  &:after {
+  .input-select-ui:valid {
+    -webkit-text-fill-color: $color-black !important;
+  }
+
+  .icon {
     position: absolute;
-    top: 1.2rem;
-    right: 1.6rem;
-    display: block;
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
+    top: 2px;
+    right: 4px;
   }
 }
 
@@ -147,19 +148,14 @@
     @extend .input-style01;
     -webkit-text-fill-color: $color-placeholder;
   }
-
-  &:after {
-    outline: 2px solid red;
+  .icon {
+    right: 8px;
   }
 }
 
 .select-style02 {
   .input-select-ui {
     @extend .input-style02;
-    -webkit-text-fill-color: $color-placeholder;
-  }
-
-  &:after {
-    outline: 2px solid blue;
+    -webkit-text-fill-color: $color-placeholder2;
   }
 }

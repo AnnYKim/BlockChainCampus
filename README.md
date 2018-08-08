@@ -67,7 +67,7 @@ _Last Modified: 2018-08-07_
   2.  **Input**
 
   - input-style01 : 연한 배경 인풋
-  - select-style01 : 셀렉트 박스 형태를 가진, 오른쪽에 화살표가 있는 인풋
+  - input-style02 : input-style01 과 동일하되, 플레이스홀더 색이 좀 더 진함 (로그인 화면에서 사용)
 
   3.  **Select**
 

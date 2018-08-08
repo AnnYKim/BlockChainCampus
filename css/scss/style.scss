@@ -13,11 +13,13 @@
 @import "base/reset";
 @import "base/common";
 @import "base/font";
+@import "base/svg";
+@import "base/icon";
 
-//[3] 모듈
+//[4] 모듈
 @import "modules/button";
 @import "modules/input";
 @import "modules/tab";
 
-//[4] 레이아웃
+//[5] 레이아웃
 @import "layout/login";
