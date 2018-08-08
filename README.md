@@ -2,7 +2,7 @@
 
 **Web Published: nykim@nykim.net**
 
-_Last Modified: 2018-08-07_
+_Last Modified: 2018-08-08_
 
 ## Tree Structure
 
@@ -11,17 +11,26 @@ _Last Modified: 2018-08-07_
     - base/
       - common.scss
       - reset.scss
+      - font.scss
+      - icon.scss
+      - svg.scss
     - helpers/
+      - animations.scss
       - mediaQueries.scss
       - mixins.scss
       - variables.scss
     - layout/
-      - main.scss
+      - login.scss
+    - modules/
+      - tab.scss
+      - input.scss
+      - button.scss
     - style.scss
   - style.css
 - images/
 - js/
-- index.html
+- fonts/
+- html/
 
 ## Markup Contents
 
@@ -30,6 +39,7 @@ _Last Modified: 2018-08-07_
   - .login: 로그인 페이지
   - .user-infomration: 사용자 정보 입력
   - .wallet-setting: 지갑 설정
+  - _(작성중...)_
 - 대부분의 페이지 구조는 .page-header 와 .page-body 로 이루어집니다.
 - .page-header 에는 해당 페이지의 타이틀이나 네비게이션 등이 들어갑니다.
 - .page-body 에는 콘텐츠가 들어갑니다.
@@ -40,23 +50,21 @@ _Last Modified: 2018-08-07_
 
 - 기본 폰트는 '나눔스퀘어체'를 사용하며, /\_font.scss 에서 정의합니다.
   - 400: Regular
-  - 600: Bold
+  - 600: Bold (디폴트)
   - 800: ExtraBold
-- 보조 폰트는 ''를 사용하며, /\_font.scss 에서 정의합니다.
-  - 300: Light
-  - 800: Bold
 
 ### 2.variables
 
 - \_variables.scss 에서 정의하고 있는 변수는 다음과 같습니다.
   - layout
-  - z-idnex : z-index 값이 필요한 요소 별로 z-index 변수를 개별 생성합니다. 이는 z-index 를 사용하고 있는 요소가 무엇인지 한눈에 파악하고 일괄 관리하기 위함입니다.
-  - path : 상대경로를 사용하는 경우 여기에 정의한 path 변수를 사용합니다.
+  - z-idnex
+  - path
   - font-weight
 
 ### 3.common style
 
 - 공통으로 사용하는 스타일은 modules/ 폴더 내 개별 scss 에서 정의합니다.
+- _(작성중...)_
 
   1.  **Button**
 
