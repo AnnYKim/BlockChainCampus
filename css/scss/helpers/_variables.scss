@@ -1,9 +1,12 @@
 @charset "utf-8";
 
-
 // **** COLOR PALLETE ****
-$color-sub: #181459; //짙은 남색
-$color-damu: #211545; //짙은 보라색
+$color-black: #323232; //기본 검정
+$color-blue: #30b9d3; //밝은 파랑
+$color-lightgray: #d3d3d3; //연한 회색
+
+$color-input: rgba(168, 182, 200, 0.15); //인풋 필드용 색상
+$color-placeholder: #a8b6c8; //
 
 // **** z-index ****
 $z-page-header: 100;

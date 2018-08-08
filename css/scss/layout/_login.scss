@@ -4,9 +4,12 @@
 
 .login {
   //[*] 로그인 페이지
+  background-color: #f7f5f5;
+  width: 100%;
+  height: 100vh;
 
   .logo {
-    //블록체인 캠퍼스 로고
+    //블록체인 캠퍼스 로고 TODO:처리해야함
     text-align: center;
     font-size: 2.4rem;
   }
@@ -14,31 +17,70 @@
   .login-area {
     //로그인 인풋 영역
     position: relative;
+    padding: 0 3rem;
 
     .login-area-email-info {
       //기본 이메일 주소
+      //TODO: 임시, 디자인 시안 미정
+      display: none;
       position: absolute;
-      top: 0;
-      right: 0;
-      color: blue;
+      bottom: 1rem;
+      right: 1.2rem;
+      color: #666;
+      font-size: 1.4rem;
+    }
+
+    .input-item {
+      margin-bottom: 1.6rem;
+    }
+
+    .input-title {
+      margin-bottom: 0.8rem;
     }
   }
 
   .login-area-error {
     //로그인시 나타나는 에러 메시지
+    //TODO: 임시, 디자인 시안 미정
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
   .button-wrap {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    text-align: center;
+    margin-top: 2.5rem;
+
+    button:last-child {
+      margin-top: 2rem;
+    }
   }
 
   .login-univ-logo {
     //최하단 학교 로고
+    display: none;
     text-align: center;
+
+    &.postech {
+      display: block;
+      // background-image: url(); //TODO: 백그라운드 이미지 추가
+    }
   }
 }
 
 .user-information {
   //[*] 사용자 정보 입력 페이지
+
+  .contents {
+    margin-top: 3.3rem;
+    margin-bottom: 3.9rem;
+    padding: 0 2.8rem 0 3.3rem;
+  }
 }
 
 .wallet-setting {

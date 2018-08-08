@@ -9,7 +9,7 @@
   @include flexbox;
   @include flex-direction(column);
   @include justify-content(flex-start);
-  margin-bottom: 26px;
+  margin-bottom: 3rem;
 
   &.input-row {
     @include flex-direction(row);
@@ -17,33 +17,48 @@
   }
 
   .input-title {
+    //각 인풋의 타이틀 (ex. 학부/학과)
+    margin-bottom: 1rem;
     font-size: 1.4rem;
-    color: darkcyan;
+    font-weight: $fw-b;
+    color: $color-black;
   }
 
   .input-item-error {
+    //인풋 아이템 내 에러 메시지
+    display: none; //TODO: 임시, 시안 나오지 않음
     position: absolute;
-    left: 0;
-    bottom: -24px;
+    right: 0;
+    bottom: -20px;
   }
 }
 
 .input-style01 {
-  height: 3.5rem;
+  height: 4rem;
   font-size: 1.5rem;
-  line-height: 3.5rem;
-  border: 0.1rem solid #b4b4b4;
-  color: #323232;
-  background-color: #fff;
+  line-height: 4rem;
+  padding: 0 1rem;
+  border-radius: 8px; //TODO: 임시
+  background-color: $color-input;
 
   @include placeholder {
-    color: orange;
+    color: $color-placeholder;
+  }
+}
+
+.input-style02 {
+  @extend .input-style01;
+  border: 1px solid $color-blue;
+  background-color: rgba(255, 255, 255, 0.15);
+
+  @include placeholder {
+    color: $color-placeholder;
   }
 }
 
 ////////// Radio //////////
 
-.radio-wrap.radio-type01 {
+.radio-wrap {
   //라디오 묶음 (type 01)
   @include flexbox;
   @include align-items(center);
@@ -51,7 +66,9 @@
   .radio-item {
     @include flexbox;
     @include align-items(center);
-    margin-left: 1.2rem;
+    margin-left: 0.4rem;
+    flex-basis: 8rem;
+    flex-shrink: 0;
 
     &:first-child {
       margin-left: 0;
@@ -59,63 +76,90 @@
   }
 
   input[type="radio"] {
-    width: 1.7rem;
-    height: 1.7rem;
-    background-size: 8.5rem 1.7rem;
+    overflow: hidden;
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
 
-    @each $map, $value in $radio-button {
-      &.radio-#{$map} {
-        background-image: url(#{$path-image}common/button/radio.png);
-        background-position: map-get($value, normal);
-      }
-    }
+    //TODO: 삭제 예정
+    // @each $map, $value in $radio-button {
+    //   &.radio-#{$map} {
+    //     background-image: url(#{$path-image}common/button/radio.png);
+    //     background-position: map-get($value, normal);
+    //   }
+    // }
 
-    @each $map, $value in $radio-button {
-      &.radio-#{$map}:checked {
-        background-position: map-get($value, active);
-      }
+    // @each $map, $value in $radio-button {
+    //   &.radio-#{$map}:checked {
+    //     background-position: map-get($value, active);
+    //   }
+    // }
+
+    &:checked:not(:disabled) + .radio-label {
+      background-color: #fff;
+      border: 2px solid $color-blue;
     }
   }
 
   .radio-label {
-    font-size: 1.3rem;
-    margin-left: 0.5rem;
+    width: 100%;
+    font-size: 1.4rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 3.6rem;
+    border-radius: 8px; //TODO: 임시
+    background-color: $color-input;
+    border: 2px solid transparent;
+    box-sizing: border-box;
   }
 }
 
-.radio-wrap.radio-type02 {
-  //라디오 묶음 (type 02)
+.radio-wrap.radio-item-4 {
+  //라디오 아이템이 4개인 경우
   @include flexbox;
   @include align-items(center);
 
   .radio-item {
-    position: relative;
-    @include flex-grow(1);
-    @include flex-basis(100%);
-    height: 20px;
-  }
-
-  input[type="radio"] {
-    width: 100%;
-    height: 100%;
-    background-color: #ddd;
-
-    &:checked:not(:disabled) {
-      background-color: #cbcbcb;
-    }
-  }
-
-  .radio-label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-basis: 7.2rem;
+    // margin-left: 0.4rem;
   }
 }
 
 ////////// Select //////////
 .select-item {
-  input {
-    border: 1px solid #aaa;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.6rem;
+    display: block;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.select-style01 {
+  .input-select-ui {
+    @extend .input-style01;
+    -webkit-text-fill-color: $color-placeholder;
+  }
+
+  &:after {
+    outline: 2px solid red;
+  }
+}
+
+.select-style02 {
+  .input-select-ui {
+    @extend .input-style02;
+    -webkit-text-fill-color: $color-placeholder;
+  }
+
+  &:after {
+    outline: 2px solid blue;
   }
 }

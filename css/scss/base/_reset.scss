@@ -140,12 +140,28 @@ input {
   border: 1px solid transparent;
 }
 
+//나눔스퀘어 전용
+//(나눔스퀘어 서체 지정 시 비밀먼호 마스킹이 인코딩되지 않는 문제)
+input[type="password"] {
+  font-family: sans-serif, Helvetica;
+
+  @include placeholder {
+    @include font-main;
+  }
+}
+
 //ios용
 input[type="text"],
 input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input:disabled {
+  //iOS에서 disabled처리한 input에 기본적으로 적용되는 스타일 제거
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
 }
 
 html {

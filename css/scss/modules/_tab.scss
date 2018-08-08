@@ -3,14 +3,12 @@
 // **** Tab style
 
 ///// 변수 리스트 /////
-$ly-tab-padding: 2rem;
 ////////////////////
 
 .tab {
   @include flexbox;
   @include align-items(center);
   width: 100%;
-  padding: 0 $ly-tab-padding;
   box-sizing: border-box;
 
   .tab-item {
@@ -18,17 +16,23 @@ $ly-tab-padding: 2rem;
     position: relative;
     width: 20%;
     height: 40px;
+    color: $color-lightgray;
     font-size: 1.4rem;
-    border-bottom: 2px solid blue;
+    border-bottom: 1px solid $color-lightgray;
+
+    &.active {
+      color: $color-blue;
+      font-weight: $fw-b;
+    }
 
     &.active:after {
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -1px;
       display: block;
       width: 100%;
-      height: 4px;
-      background-color: blue;
+      height: 2px;
+      background-color: $color-blue;
       content: "";
     }
   }

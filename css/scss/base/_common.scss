@@ -3,7 +3,7 @@
 // common style
 
 // **** VARIABLES ****
-$ly-header-height: 7rem;
+$ly-header-height: 7rem; //페이지 헤더 높이
 //////////////////////
 
 // 페이지 헤더
@@ -17,7 +17,7 @@ $ly-header-height: 7rem;
   height: $ly-header-height;
   text-align: center;
   line-height: $ly-header-height;
-  // background-color: #2e399b;
+  background-color: #fff;
 
   .page-title {
     color: #323232;
@@ -36,15 +36,11 @@ $ly-header-height: 7rem;
 
 // 버튼이 아래로 나열되는 영역
 .button-bottom-area {
-  position: fixed;
-  width: 100%;
-  bottom: 10px;
-  left: 0;
-  ///
-  ///
+  position: relative;
   @include flexbox;
   @include justify-content(center);
   text-align: center;
+  margin-top: 4rem;
 
   button:not(:first-child) {
     margin-top: 1rem;
@@ -53,7 +49,7 @@ $ly-header-height: 7rem;
 
 //에러 메시지
 .error-style01 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: red;
 }
 

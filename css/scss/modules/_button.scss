@@ -5,23 +5,30 @@
 // 레이아웃 정의
 
 button {
-  font-size: 1.4rem;
-  padding: 8px 14px;
+  font-size: 1.6rem;ㅅ
 }
 
 .button-style01 {
-  border: 1px solid red;
-  border-radius: 12px;
+  height: 3.8rem;
+  padding: 0 3.2rem;
+  color: #fff;
+  background-color: $color-blue;
+  border-radius: 20px; //TODO: 임시
 }
 
 .button-style02 {
-  border: 1px solid #aaa;
-  color: #aaa;
-  border-radius: 12px;
+  @extend .button-style01;
+  background-color: #aaa;
 
   &.active {
-    background-color: navy;
+    background-color: $color-blue;
   }
+}
+
+.button-style03 {
+  font-size: 1.4rem;
+  color: #aaa;
+  text-decoration: underline;
 }
 
 // 사이즈 정의
