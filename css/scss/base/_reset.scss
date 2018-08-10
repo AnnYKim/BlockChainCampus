@@ -181,6 +181,7 @@ html {
 body {
   position: relative;
   min-height: 100%;
+  height: 100%; //18-08-08 추가
   overflow-y: scroll;
   @include font-main;
   color: #212529;

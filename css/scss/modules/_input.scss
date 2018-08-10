@@ -8,7 +8,6 @@
   position: relative;
   @include flexbox;
   @include flex-direction(column);
-  @include justify-content(flex-start);
   margin-bottom: 3rem;
 
   &.input-row {
@@ -29,7 +28,7 @@
     display: none; //TODO: 임시, 시안 나오지 않음
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -2rem;
   }
 }
 
@@ -138,24 +137,42 @@
 
   .icon {
     position: absolute;
-    top: 2px;
-    right: 4px;
+    top: 0.3rem;
+    right: 0.4rem;
   }
+}
+
+.select-hidden {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  outline: 4px solid red;
 }
 
 .select-style01 {
   .input-select-ui {
     @extend .input-style01;
-    -webkit-text-fill-color: $color-placeholder;
+    -webkit-text-fill-color: $color-black;
+
+    @include placeholder {
+      -webkit-text-fill-color: $color-placeholder;
+    }
   }
   .icon {
-    right: 8px;
+    right: 0.8rem;
   }
 }
 
 .select-style02 {
   .input-select-ui {
     @extend .input-style02;
-    -webkit-text-fill-color: $color-placeholder2;
+    -webkit-text-fill-color: $color-black;
+
+    @include placeholder {
+      -webkit-text-fill-color: $color-placeholder2;
+    }
   }
 }

@@ -2,11 +2,15 @@
 
 // **** login page
 
+// - - - - - - - - - - - - - - -
+// [ .login ]
+// - - - - - - - - - - - - - - -
+
 .login {
   //[*] 로그인 페이지
   background-color: #f7f5f5;
   width: 100%;
-  height: 100%;
+  // height: 100%;
 
   .login-header {
     //로그인 상단
@@ -53,7 +57,7 @@
   .login-area-error {
     //로그인시 나타나는 에러 메시지
     //TODO: 임시, 디자인 시안 미정
-    display: none;
+    // display: none;
 
     &.active {
       display: block;
@@ -85,6 +89,10 @@
   }
 }
 
+// - - - - - - - - - - - - - - -
+// [ .user-infomration ]
+// - - - - - - - - - - - - - - -
+
 .user-information {
   //[*] 사용자 정보 입력 페이지
 
@@ -95,12 +103,39 @@
   }
 }
 
-.wallet-setting {
-  //[*] 지갑 설정 페이지
+// - - - - - - - - - - - - - - -
+// [ .wallet- ]
+// - - - - - - - - - - - - - - -
+
+[class^="wallet-"] {
   .wallet-info {
     text-align: center;
     color: chartreuse;
     font-size: 1.3rem;
     margin: 2.4rem 0;
   }
+}
+
+// - - - - - - - - - - - - - - -
+// [ .wallet-setting ]
+// - - - - - - - - - - - - - - -
+
+.wallet-setting {
+  //[*] 지갑 설정 페이지
+
+  .button-item {
+    margin-top: 3rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// - - - - - - - - - - - - - - -
+// [ .wallet-import ]
+// - - - - - - - - - - - - - - -
+
+.wallet-import {
+  //[*] 지갑 가져오기 페이지
 }

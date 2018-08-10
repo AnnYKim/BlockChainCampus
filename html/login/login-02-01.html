@@ -55,7 +55,7 @@
 
           <div class="select-item select-style01">
             <input id="input-sel-departments" type="text" placeholder="소속된 학부 또는 학과를 선택하세요." class="input-select-ui" readonly="readonly"
-            />
+              disabled="disabled" value="학과1" />
             <i class="icon icon-select01"></i>
             <!--
               [전달사항]
@@ -63,7 +63,7 @@
             -->
             <p class="input-item-error error-style01">학부 또는 학과를 선택해주세요.</p>
           </div>
-          <select id="sel-departments" class="display-none">
+          <select id="sel-departments" class="select-hidden">
             <option value="">학과1</option>
             <option value="">학과2</option>
             <option value="">학부1</option>
@@ -71,7 +71,8 @@
           </select>
           <!--
             [전달사항]
-            이 셀렉트박스는 숨겨져 있습니다. 
+            이 셀렉트박스는 input-ui-select 위에 opacity:0으로 숨겨져 있습니다. 
+            사용자가 선택한 option이 input value가 되도록 설정해 주세요.
           -->
         </div>
 

@@ -30,7 +30,7 @@
 
 // 글자 숨기기
 @mixin text-hidden {
-  text-indent: -999px;
+  text-indent: -9999rem;
   overflow: hidden;
 }
 
