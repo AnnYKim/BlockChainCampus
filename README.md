@@ -32,6 +32,8 @@ _Last Modified: 2018-08-08_
 - fonts/
 - html/
 
+---
+
 ## Markup Contents
 
 - 전체를 #wrapper 라는 div 로 감싸고 있습니다.
@@ -43,6 +45,22 @@ _Last Modified: 2018-08-08_
 - 대부분의 페이지 구조는 .page-header 와 .page-body 로 이루어집니다.
 - .page-header 에는 해당 페이지의 타이틀이나 네비게이션 등이 들어갑니다.
 - .page-body 에는 콘텐츠가 들어갑니다.
+
+---
+
+## Style Name
+
+### prefix name
+
+- input-: 인풋과 관련된 요소
+- select-: 셀렉트 박스와 관련된 요소
+- error-: 에러와 관련된 요소
+
+### additinal css
+
+- active: 활성화 처리된 요소
+
+---
 
 ## CSS Guide
 

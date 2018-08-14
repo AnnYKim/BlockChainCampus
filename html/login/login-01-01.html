@@ -27,9 +27,19 @@
       <div class="input-item">
         <p class="input-title">학교명</p>
         <div class="select-item select-style02">
-          <input type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" />
+          <input type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="" />
           <i class="icon icon-select02"></i>
         </div>
+        <select id="sel-departments" class="select-hidden">
+          <option value="">포항공대</option>
+          <option value="">인천대</option>
+          <option value="">학교3</option>
+          <option value="">학교4</option>
+        </select>
+        <!--
+          [전달사항]
+          이 셀렉트박스는 input-ui-select 위에 opacity:0으로 숨겨져 있습니다. 
+        -->
       </div>
       <div class="input-item">
         <p class="input-title">이메일</p>
@@ -53,7 +63,7 @@
         [전달사항]
         모든 input field에 값이 있을 때 로그인 버튼이 활성화 되며,disabled 속성을 제거해 주세요.
       -->
-      <button class="button-style03 ">회원가입</button>
+      <button class="button-style03">회원가입</button>
     </div>
 
     <div class="login-univ-logo">
