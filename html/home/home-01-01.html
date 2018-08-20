@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>홈 화면 &middot; BLOCKCHAIN CAMPUS</title>
+  <title>DApp list &middot; BLOCKCHAIN CAMPUS</title>
 
   <link type="text/css" rel="stylesheet" href="../../css/style.css" />
 
@@ -17,62 +17,125 @@
 
 <body>
   <!-- 홈 화면 -->
-  <div id="wrapper" class="home-screen">
+  <div id="wrapper" class="home-dappList">
 
-    <div class="login-header">
-      <div class="page-header-left">
-        뒤로가기
-      </div>
-      <h1 class="logo">GO VOTE</h1>
-    </div>
+    <div class="page-body">
 
-    <div class="tester">
-      <input type="date" class="input-style01" placeholder="Choose a Date" />
-      <span class="tester_span">_플레이스홀더_</span>
-      <!-- 
-        유저가 input에 입력 시도 시 플레이스홀더 역할의 노드를 숨김처리하도록 해야할 듯! 
-      -->
-    </div>
+      <div class="contents">
 
-    <div class="login-body">
-      <div class="input-item">
-        <p class="input-title">학교명</p>
-        <div class="select-item select-style02">
-          <input type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" />
-          <i class="icon icon-select02"></i>
+        <div class="dashboard">
+          <div class="image-container overlay-black">
+            <img src="../../images/thumb/test.png" alt="thumbnail" />
+          </div>
+          <div class="dashboard-content">
+            <p class="dashboard-content-title">Go Vote</p>
+            <p class="dashboard-content-description">블록체인 기반 투표 시스템</p>
+          </div>
+        </div> <!-- //end .dashboard -->
+
+
+        <div class="dapp-list">
+          <div class="dapp-list-top">
+            <p class="title">DApp list</p>
+            <div class="sorting-container">
+              <div class="sorting-item">
+                <div class="input-sorting-ui">
+                  <p>최신순</p>
+                  <i class="icon icon-sorting01 active"></i></div>
+                <!--
+                  [전달사항]
+                  셀렉트콤보가 보여지면/닫히면, icon에게 active 클래스를 추가/제거해 주세요.
+                -->
+              </div>
+              <select id="sel-sorting-dapp" class="select-hidden">
+                <option value="">최신순</option>
+                <option value="">인기순</option>
+              </select>
+              <!--
+                [전달사항]
+                이 셀렉트박스는 input-sorting-ui 위에 opacity:0으로 숨겨져 있습니다. 미사용 시 지워주세요.
+              -->
+            </div> <!-- //end of .sorting-container -->
+          </div> <!-- //end of .dapp-list-top-->
+
+          <div class="list-view">
+            <table>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">1</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름</div>
+                    <div class="description">문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">2</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름22</div>
+                    <div class="description">문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">3</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름333</div>
+                    <div class="description">문구문구문구문구문구문구문구문구문구</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="order">100</div>
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름이름</div>
+                    <div class="description">소개문</div>
+                  </div>
+                </td>
+              </tr>
+              </tr>
+              <tr>
+                <td class="list-view-item">
+                  <div class="thumbnail image-container"><img src="" alt=""></div>
+                  <div class="content">
+                    <div class="name">앱 이름</div>
+                    <div class="description">간단한 설명문</div>
+                  </div>
+                  <div class="star">⭐</div>
+                </td>
+              </tr>
+            </table>
+            <!--
+              [전달사항]
+              클래스명만 유지하면 테이블 마크업이 아니여도 무관합니다.
+            -->
+          </div>
+
+        </div> <!-- //end of .dapp-list -->
+
+
+        <div class="input-item">
+          <p class="input-title">투표 시작 일시</p>
+          <div class="select-item select-style02">
+            <input type="text" placeholder="2018년 5월 22일(화) 10:00" class="input-select-ui" readonly="readonly" disabled="disabled" value=""
+            />
+          </div>
+          <input type="datetime-local" id="sel-voteDate" class="input-hidden" />
+          <!--
+            [전달사항]
+            이 input[type="datetime-local"]은 input-select-ui 위에 opacity:0으로 숨겨져 있습니다. 
+          -->
         </div>
-      </div>
-      <div class="input-item">
-        <p class="input-title">이메일</p>
-        <input type="email" placeholder="이메일을 입력하세요." class="input-style02" />
-        <p class="login-area-email-info">@postech.ac.kr</p>
-      </div>
-      <div class="input-item">
-        <p class="input-title">비밀번호</p>
-        <input type="password" placeholder="비밀번호를 입력하세요." class="input-style02" />
-        <p class="error-style01 login-area-error">잘못된 비밀번호 입니다.</p>
-        <!-- 
-          [전달사항]
-          오류 발생 시 login-area-error에 active 클래스를 추가하고, input field에 focus되면 active 클래스를 제거해 주세요.
-        -->
+
       </div>
     </div>
 
-    <div class="button-wrap">
-      <button class="button-style02 disabled">로그인</button>
-      <!-- 
-        [전달사항]
-        모든 input field에 값이 있을 때 로그인 버튼이 활성화 되며,disabled 속성을 제거해 주세요.
-      -->
-      <button class="button-style03 ">회원가입</button>
-    </div>
-
-    <div class="login-univ-logo">
-      (University Logo)
-    </div>
-    <!-- 
-      [전달사항]
-      포스텍용 앱인 경우, .login-univ-logo에 .postech 클래스를 추가해 주세요.
-    -->
   </div>
 </body>

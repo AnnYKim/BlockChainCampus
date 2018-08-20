@@ -41,6 +41,7 @@ _Last Modified: 2018-08-08_
   - .login: 로그인 페이지
   - .user-infomration: 사용자 정보 입력
   - .wallet-setting: 지갑 설정
+    \_ .home-dappList: 홈 화면(DApp list)
   - _(작성중...)_
 - 대부분의 페이지 구조는 .page-header 와 .page-body 로 이루어집니다.
 - .page-header 에는 해당 페이지의 타이틀이나 네비게이션 등이 들어갑니다.
@@ -50,13 +51,13 @@ _Last Modified: 2018-08-08_
 
 ## Style Name
 
-### prefix name
+### prefix class name
 
 - input-: 인풋과 관련된 요소
 - select-: 셀렉트 박스와 관련된 요소
 - error-: 에러와 관련된 요소
 
-### additinal css
+### toggle class name
 
 - active: 활성화 처리된 요소
 
