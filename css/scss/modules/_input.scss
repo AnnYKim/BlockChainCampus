@@ -10,6 +10,17 @@
   @include flex-direction(column);
   margin-bottom: 3rem;
 
+  &.disable {
+    @include select-none;
+    @include pointer-none;
+
+    .input-title,
+    .radio-label,
+    input {
+      color: $color-disable;
+    }
+  }
+
   &.input-row {
     @include flex-direction(row);
     @include justify-content(space-between);
@@ -25,10 +36,16 @@
 
   .input-item-error {
     //인풋 아이템 내 에러 메시지
-    display: none; //TODO: 임시, 시안 나오지 않음
-    position: absolute;
-    right: 0;
-    bottom: -2rem;
+    display: none; 
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    // position: absolute;
+    // right: 0;
+    // bottom: -2rem;
+
+    &.active {
+      display: block;
+    }
   }
 }
 
@@ -37,8 +54,11 @@
   padding: 0 1rem;
   line-height: 4rem;
   font-size: 1.4rem;
-  border-radius: 8px; //TODO: 임시
+  border-radius: 0.8rem;
   background-color: $color-input;
+  color: $color-input-text;
+  font-weight: $fw-n;
+  letter-spacing: -0.03rem;
 
   @include placeholder {
     color: $color-placeholder;
@@ -117,10 +137,10 @@
     font-size: 1.2rem;
     height: 4rem;
     color: $color-black;
-    font-weight: $fw-b;
+    font-weight: $fw-n;
     text-align: center;
-    line-height: 3.6rem;
-    border-radius: 8px; //TODO: 임시
+    line-height: 3.7rem;
+    border-radius: 0.8rem;
     background-color: $color-input;
     border: 2px solid transparent;
     box-sizing: border-box;
@@ -145,11 +165,17 @@
   .input-select-ui:valid {
     -webkit-text-fill-color: $color-black !important;
   }
-
   .icon {
     position: absolute;
     top: 0.3rem;
     right: 0.4rem;
+  }
+
+  &.active {
+    .input-select-ui {
+      border: 1px solid $color-blue;
+      box-sizing: border-box;
+    }
   }
 }
 
@@ -166,7 +192,7 @@
 .select-style01 {
   .input-select-ui {
     @extend .input-style01;
-    -webkit-text-fill-color: $color-black;
+    -webkit-text-fill-color: $color-navy;
 
     @include placeholder {
       -webkit-text-fill-color: $color-placeholder;
@@ -175,15 +201,32 @@
   .icon {
     right: 0.8rem;
   }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select01{
+      background-image: icon(select-active, #a8b6c8);
+    }
+    .icon-select02{
+      background-image: icon(select-active, #b1c0cf);
+    }
+  }
 }
 
 .select-style02 {
   .input-select-ui {
     @extend .input-style02;
-    -webkit-text-fill-color: $color-black;
+    -webkit-text-fill-color: $color-navy;
 
     @include placeholder {
       -webkit-text-fill-color: $color-placeholder2;
+    }
+  }
+
+  //활성화 시, 화살표 아이콘 변경
+  &.active {
+    .icon-select02{
+      background-image: icon(select-active, #b1c0cf);
     }
   }
 }

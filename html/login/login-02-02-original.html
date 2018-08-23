@@ -13,12 +13,6 @@
   <meta http-equiv="Content-Script-Type" content="text/javascript">
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <script type="text/javascript" src="../../js/pub.js"></script>
-  <!--
-    [전달사항]
-    클래스 토글 확인용 js입니다. 불필요시 지워주세요.
-  -->
 </head>
 
 <body>
@@ -42,47 +36,48 @@
 
       <div class="contents">
 
-          <div class="input-item">
+        <div class="input-item">
+          <p class="input-title">직책/직급</p>
+
+          <div class="select-item select-style01">
+            <input id="input-sel-departments" type="text" placeholder="직책 또는 직급을 선택하세요." class="input-select-ui" readonly="readonly"
+              disabled="disabled" />
+            <i class="icon icon-select01"></i>
+            <p class="input-item-error error-style01">직책 또는 직급을 선택해주세요.</p>
+          </div>
+          <select id="sel-departments" class="select-hidden">
+            <option value="">직책1</option>
+            <option value="">직책2</option>
+            <option value="">직급1</option>
+            <option value="">직급2</option>
+          </select>
+          <!--
+            [전달사항]
+            이 셀렉트박스는 input-select-ui 위에 opacity:0으로 숨겨져 있습니다. 미사용 시 지워주세요.
+          -->
+        </div>
+
+
+
+        <div class="input-item">
             <p class="input-title">학과/부서</p>
-            
             <div class="select-item select-style01">
-              <input type="text" placeholder="담당 학과 또는 부서를 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="" data-ui-id="input-departments-employees"
-              />
-              <i class="icon icon-select02"></i>
-              <ul class="selectbox" data-ui-id="select-departments-employees">
-                <li class="selectbox-item" data-ui-content="학과111">학과111</li>
-                <li class="selectbox-item" data-ui-content="학과222">학과222</li>
-                <li class="selectbox-item" data-ui-content="학과333">학과333</li>
-              </ul>
+                <input type="text" placeholder="담당 학과 또는 부서를 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="" data-ui-id="input-departments-employees"
+                />
+                <i class="icon icon-select02"></i>
+                <ul class="selectbox" data-ui-id="select-departments-employees">
+                    <li class="selectbox-item" data-ui-content="수학과">수학과</li>
+                </ul>
             </div>
           </div>
 
         <div class="input-item">
-          <p class="input-title">직책/직급</p>
-          
-          <div class="select-item select-style01">
-            <input type="text" placeholder="직책 또는 직급을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="" data-ui-id="input-position"
-            />
-            <i class="icon icon-select02"></i>
-            <ul class="selectbox" data-ui-id="select-position">
-              <li class="selectbox-item" data-ui-content="직책">직책</li>
-              <li class="selectbox-item" data-ui-content="직급">직급</li>
-            </ul>
-          </div>
+          <p class="input-title">교번/직번</p>
+          <input type="number" placeholder="교번 또는 직번을 입력하세요." class="input-style01" />
+          <p class="input-item-error error-style01 display-block">정확한 교번 또는 직번을 입력해주세요.</p>
         </div>
 
-
         <div class="input-item">
-            <p class="input-title">교번/직번</p>
-            <input type="number" placeholder="교번 또는 직번을 입력하세요." class="input-style01" />
-            <p class="input-item-error error-style01 active">정확한 교번/직번을 입력해주세요.</p>
-            <!-- 
-              [전달사항]
-              오류 발생 시 input-item-error에 active 클래스 토글해주세요.
-            -->
-          </div>
-
-        <div class="input-item disable">
           <p class="input-title">성별</p>
           <div class="radio-wrap">
             <div class="radio-item">
@@ -97,11 +92,7 @@
         </div>
 
         <div class="button-bottom-area">
-          <button class="button-style01 disable">입력 완료</button>
-          <!-- 
-            [전달사항]
-            활성화시에는 disable 클래스를 제거해 주세요.
-          -->
+          <button class="button-style01">입력 완료</button>
         </div>
 
       </div>

@@ -10,7 +10,7 @@ $NanumSquareEB: "NanumSquareEB";
 
 @font-face {
   font-family: "NanumSquare";
-  font-weight: 400;
+  font-weight: 500;
   src: url(#{$path-font}#{$NanumSquareR}.eot);
   src: url(#{$path-font}#{$NanumSquareR}.eot?#iefix) format("embedded-opentype"),
     url(#{$path-font}#{$NanumSquareR}.woff) format("woff"),
@@ -27,7 +27,7 @@ $NanumSquareEB: "NanumSquareEB";
 }
 @font-face {
   font-family: "NanumSquare";
-  font-weight: 800;
+  font-weight: 700;
   src: url(#{$path-font}#{$NanumSquareEB}.eot);
   src: url(#{$path-font}#{$NanumSquareEB}.eot?#iefix)
       format("embedded-opentype"),

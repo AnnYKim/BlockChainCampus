@@ -68,9 +68,9 @@ _Last Modified: 2018-08-08_
 ### 1.fonts
 
 - 기본 폰트는 '나눔스퀘어체'를 사용하며, /\_font.scss 에서 정의합니다.
-  - 400: Regular
-  - 600: Bold (디폴트)
-  - 800: ExtraBold
+  - normal(500)
+  - bold(600)
+  - bolder(800)
 
 ### 2.variables
 
@@ -87,9 +87,9 @@ _Last Modified: 2018-08-08_
 
   1.  **Button**
 
-  - btn-style01 : 양옆이 둥그런 파란색 버튼
-  - btn-style02 : btn-style01 과 동일하되, active 클래스가 붙지 않으면 회색
-  - btn-style03 : 링크처럼 생긴 버튼 (예: 회원가입)
+  - button-style01 : 양옆이 둥그런 파란색 버튼
+  - button-style02 : btn-style01 과 동일하되, active 클래스가 붙지 않으면 회색 //삭제예정
+  - button-style03 : 링크처럼 생긴 버튼 (예: 회원가입)
 
   2.  **Input**
 

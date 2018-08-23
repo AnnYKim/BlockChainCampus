@@ -144,9 +144,11 @@ input {
 //(나눔스퀘어 서체 지정 시 비밀먼호 마스킹이 인코딩되지 않는 문제)
 input[type="password"] {
   font-family: sans-serif, Helvetica;
+  letter-spacing: 1px;
 
   @include placeholder {
     @include font-main;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -158,7 +160,8 @@ input[type="email"] {
   appearance: none;
 }
 
-input:disabled {
+input:disabled,
+input[readonly] {
   //iOS에서 disabled처리한 input에 기본적으로 적용되는 스타일 제거
   opacity: 1;
   -webkit-text-fill-color: inherit;
@@ -181,7 +184,7 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  height: 100%; //18-08-08 추가
+  // height: 100%; //18-08-08 추가
   overflow-y: scroll;
   @include font-main;
   color: #212529;

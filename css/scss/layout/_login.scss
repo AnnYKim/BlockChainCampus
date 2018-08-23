@@ -34,15 +34,23 @@
     position: relative;
     padding: 0 3rem;
 
+    .input-email {
+      padding-right: 12rem;
+    }
+
     .login-area-email-info {
       //기본 이메일 주소
       //TODO: 임시, 디자인 시안 미정
       display: none;
       position: absolute;
       bottom: 1rem;
-      right: 1.2rem;
-      color: #666;
+      right: 1.1rem;
+      color: $color-lightblue;
       font-size: 1.4rem;
+
+      &.active {
+        display: block;
+      }
     }
 
     .input-item {
@@ -57,7 +65,9 @@
   .login-area-error {
     //로그인시 나타나는 에러 메시지
     //TODO: 임시, 디자인 시안 미정
-    // display: none;
+    display: none;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
 
     &.active {
       display: block;
@@ -97,7 +107,7 @@
   //[*] 사용자 정보 입력 페이지
 
   .contents {
-    margin-top: 3.3rem;
+    margin-top: 3.6rem;
     margin-bottom: 3.9rem;
     padding: 0 2.8rem 0 3.3rem;
   }
