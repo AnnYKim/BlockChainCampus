@@ -19,6 +19,12 @@
     input {
       color: $color-disable;
     }
+
+    input {
+      @include placeholder {
+        -webkit-text-fill-color: $color-disable;
+      }
+    }
   }
 
   &.input-row {
@@ -36,8 +42,8 @@
 
   .input-item-error {
     //인풋 아이템 내 에러 메시지
-    display: none; 
-    margin-top: 0.2rem;
+    display: none;
+    margin-top: 0.4rem;
     margin-left: 1rem;
     // position: absolute;
     // right: 0;
@@ -58,7 +64,6 @@
   background-color: $color-input;
   color: $color-input-text;
   font-weight: $fw-n;
-  letter-spacing: -0.03rem;
 
   @include placeholder {
     color: $color-placeholder;
@@ -204,10 +209,10 @@
 
   //활성화 시, 화살표 아이콘 변경
   &.active {
-    .icon-select01{
+    .icon-select01 {
       background-image: icon(select-active, #a8b6c8);
     }
-    .icon-select02{
+    .icon-select02 {
       background-image: icon(select-active, #b1c0cf);
     }
   }
@@ -225,7 +230,7 @@
 
   //활성화 시, 화살표 아이콘 변경
   &.active {
-    .icon-select02{
+    .icon-select02 {
       background-image: icon(select-active, #b1c0cf);
     }
   }
