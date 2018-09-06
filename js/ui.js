@@ -52,16 +52,9 @@ $(function() {
     $selectItem.on("click", function() {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
-        $(this)
-          .find(".selectbox")
-          .removeClass("active");
       } else {
         $selectItem.removeClass("active");
-        $selectItem.find(".selectbox").removeClass("active");
         $(this).addClass("active");
-        $(this)
-          .find(".selectbox")
-          .addClass("active");
       }
     });
   };

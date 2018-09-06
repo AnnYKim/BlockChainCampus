@@ -1,17 +1,13 @@
 @charset "utf-8";
 
 // **** MIXIN SCSS (nykim@nykim.net)
-// **** Last Modified : 2018-08-06
+// **** Last Modified : 2018-09-05
 
 // 폰트
 @mixin font-main($weight: 500) {
-  font-family: "NanumSquare", AppleGothic, sans-serif, Helvetica;
+  font-family: "NotoSans", AppleGothic, sans-serif, Helvetica;
   font-weight: $weight;
 }
-// @mixin font-sub($weight: 300) {
-//   font-family: "돋움", AppleGothic, sans-serif, Helvetica;
-//   font-weight: $weight;
-// }
 
 // 글자 줄임 표시
 @mixin ellipsis($lines: 1) {
@@ -26,6 +22,11 @@
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
   }
+}
+
+//웹키트 탭 하이라이트 컬러
+@mixin tap-highlight {
+  -webkit-tap-highlight-color: rgba(238, 186, 186, 0.4);
 }
 
 // 글자 숨기기
@@ -277,4 +278,40 @@
   &:-ms-input-placeholder {
     @content;
   }
+}
+
+// Browser Prefixes
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
 }

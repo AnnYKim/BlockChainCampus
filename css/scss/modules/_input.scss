@@ -36,7 +36,7 @@
     //각 인풋의 타이틀 (ex. 학부/학과)
     margin-bottom: 1rem;
     font-size: 1.4rem;
-    font-weight: $fw-b;
+    font-weight: $fw-m;
     color: $color-black;
   }
 
@@ -63,7 +63,6 @@
   border-radius: 0.8rem;
   background-color: $color-input;
   color: $color-input-text;
-  font-weight: $fw-n;
 
   @include placeholder {
     color: $color-placeholder;
@@ -142,7 +141,6 @@
     font-size: 1.2rem;
     height: 4rem;
     color: $color-black;
-    font-weight: $fw-n;
     text-align: center;
     line-height: 3.7rem;
     border-radius: 0.8rem;
@@ -180,6 +178,9 @@
     .input-select-ui {
       border: 1px solid $color-blue;
       box-sizing: border-box;
+    }
+    .selectbox {
+      display: block;
     }
   }
 }

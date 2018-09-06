@@ -7,6 +7,7 @@
 // -------------------------
 $color-black: #323b45; //기본 검정
 $color-blue: #30b9d3; //밝은 파랑
+$color-darkblue: #11adca; //짙은 파랑
 $color-navy: #17365b;
 $color-lightgray: #d3d3d3; //연한 회색
 $color-lightblue: #b1c0cf;
@@ -37,9 +38,13 @@ $path-font: "../fonts/";
 // -------------------------
 // [ 4. font-weight ]
 // -------------------------
-$fw-n: normal;
-$fw-b: bold;
-$fw-eb: bolder;
+$fw-b: 900;
+$fw-bl: 700;
+$fw-m: 500;
+$fw-r: 400;
+$fw-dl: 300;
+$fw-l: 200;
+$fw-t: 100;
 
 // -------------------------
 // [ 5. style ]

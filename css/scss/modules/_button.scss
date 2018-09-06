@@ -35,7 +35,8 @@ button {
   background-color: $color-blue;
   border-radius: 1.9rem;
 
-  &.disable {
+  &.disable,
+  &:disabled {
     @include pointer-none;
     @include select-none;
     background-color: $color-disable;
@@ -62,6 +63,22 @@ button {
   font-size: 1.4rem;
   color: #aaa;
   text-decoration: underline;
+}
+
+.button-style04 {
+  // 길쭉하게 생긴 버튼
+  height: 6rem;
+  color: #fff;
+  line-height: 6rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  background-color: $color-blue;
+}
+
+.button-style-drawer {
+  // 세로 ... 버튼
+  width: 2rem;
+  height: 2rem;
 }
 
 // 사이즈 정의

@@ -6,9 +6,13 @@
 // [ .login ]
 // - - - - - - - - - - - - - - -
 
+.body-login {
+  background-color: #f1f4f7;
+}
+
 .login {
   //[*] 로그인 페이지
-  background-color: #f7f5f5;
+  background-color: #f1f4f7;
   width: 100%;
   height: 100%;
 
@@ -16,6 +20,7 @@
     //로그인 상단
     padding-top: 3rem;
     text-align: center;
+
     .logo {
       //블록체인 캠퍼스 로고
       display: inline-block;
@@ -51,7 +56,7 @@
     //기본 이메일 주소
     display: none;
     position: absolute;
-    top: 3.5rem;
+    top: 4rem;
     right: 1.1rem;
     color: $color-lightblue;
     font-size: 1.4rem;
@@ -63,7 +68,6 @@
 
   .login-area-error {
     //로그인시 나타나는 에러 메시지
-    //TODO: 임시, 디자인 시안 미정
     display: none;
     margin-top: 0.4rem;
     margin-left: 1rem;
@@ -74,10 +78,6 @@
   }
 
   .button-wrap {
-    @include flexbox;
-    @include align-items(center);
-    @include flex-direction(column);
-    text-align: center;
     margin-top: 2.5rem;
 
     .button-style03 {
@@ -180,41 +180,4 @@
     margin-bottom: 3.9rem;
     padding: 0 2.8rem 0 3.3rem;
   }
-}
-
-// - - - - - - - - - - - - - - -
-// [ .wallet- ]
-// - - - - - - - - - - - - - - -
-
-[class^="wallet-"] {
-  .wallet-info {
-    text-align: center;
-    color: chartreuse;
-    font-size: 1.3rem;
-    margin: 2.4rem 0;
-  }
-}
-
-// - - - - - - - - - - - - - - -
-// [ .wallet-setting ]
-// - - - - - - - - - - - - - - -
-
-.wallet-setting {
-  //[*] 지갑 설정 페이지
-
-  .button-item {
-    margin-top: 3rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
-// - - - - - - - - - - - - - - -
-// [ .wallet-import ]
-// - - - - - - - - - - - - - - -
-
-.wallet-import {
-  //[*] 지갑 가져오기 페이지
 }

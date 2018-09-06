@@ -48,15 +48,27 @@ $ly-header-height: 7rem; //페이지 헤더 높이
 }
 
 // 버튼이 아래로 나열되는 영역
-.button-bottom-area {
-  position: relative;
+.button-wrap {
   @include flexbox;
-  @include justify-content(center);
+  @include align-items(center);
+  @include flex-direction(column);
   text-align: center;
-  margin-top: 4rem;
 
   button:not(:first-child) {
     margin-top: 1rem;
+  }
+}
+
+// 버튼 wrap 가로 모드
+.button-wrap-row {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
+
+  button {
+    flex-basis: 50%;
+    flex-grow: 1;
   }
 }
 
@@ -98,6 +110,10 @@ $ly-header-height: 7rem; //페이지 헤더 높이
   display: none;
 }
 
+input[readonly] {
+  cursor: pointer;
+}
+
 ///////////////
 //태블릿대응??//TODO:
 
@@ -106,13 +122,4 @@ $ly-header-height: 7rem; //페이지 헤더 높이
     font-size: 100%;
     height: 100%;
   }
-}
-
-
-body.login {
-  background-color: #f7f5f5;
-}
-
-input[readonly] {
-  cursor: pointer;
 }

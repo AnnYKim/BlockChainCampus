@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>로그인 &middot; BLOCKCHAIN CAMPUS</title>
+  <title>BLOCKCHAIN CAMPUS</title>
 
   <link type="text/css" rel="stylesheet" href="../../css/style.css" />
 
@@ -23,91 +23,74 @@
 </head>
 
 <body class="login">
-  <!-- 회원가입 화면 -->
+  <!-- 로그인 화면 -->
   <div id="wrapper" class="login">
 
     <div class="login-header">
       <h1 class="logo">BLOCKCHAIN CAMPUS</h1>
     </div>
 
-    <!-- <div class="button-wrap">
-      <button class="button-style03 deco-signup">회원가입</button>
-    </div> -->
-
-    <div class="login-signup">
-      <!-- 모달처럼 보이게끔 처리 -->
-
-      <div class="login-signup-body">
-        <strong class="login-singup-title">회원가입</strong>
-
-        <form>
-          <div class="input-item">
-            <p class="input-title">학교명</p>
-            <div class="select-item select-style02">
-              <input type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="" data-ui-id="input-university-signup"
-              />
-              <!--
-              [전달사항]
-              - 스타일용 input입니다. 현재는 클릭 시 하단의 .selectbox의 data-ui-content 내용이 value로 들어갑니다. (ui.js)
-              - 셀렉트박스 활성/비활성화 시 .input-select-ui와 .selectbo 각각에게 active 클래스를 토글해주세요. (ui.js)
-            -->
-              <i class="icon icon-select02"></i>
-              <ul class="selectbox" data-ui-id="select-university-signup">
-                <li class="selectbox-item" data-ui-content="고려대학교">고려대학교</li>
-                <li class="selectbox-item" data-ui-content="서강대학교">서강대학교</li>
-                <li class="selectbox-item" data-ui-content="연세대학교">연세대학교</li>
-                <li class="selectbox-item" data-ui-content="인천대학교">인천대학교</li>
-                <li class="selectbox-item" data-ui-content="POSTECH">POSTECH</li>
-                <li class="selectbox-item" data-ui-content="대학교111">대학교111</li>
-                <li class="selectbox-item" data-ui-content="대학교222">대학교222</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="input-item">
-            <p class="input-title">이메일</p>
-            <input type="email" placeholder="이메일을 입력하세요." class="input-style02 input-email" />
-            <p class="login-area-email-info">@ postech.ac.kr</p>
-            <p class="error-style01 login-area-error">이미 가입된 메일 주소입니다.</p>
-            <!-- 
+    <form>
+      <div class="login-body">
+        <div class="input-item">
+          <p class="input-title">학교명</p>
+          <div class="select-item select-style02 active">
+            <input type="text" placeholder="학교명을 선택하세요." class="input-select-ui" readonly="readonly" disabled="disabled" value="POSTECH"
+              data-ui-id="input-university" />
+            <!--
             [전달사항]
-            - 사용자가 학교 선택 시 login-area-email-info에 해당하는 학교 이메일을 넣어주세요.
-            -  active 클래스가 있으면 보이고 없으면 보이지 않습니다.(ui.js)
+            - .select-item을 클릭하면 active 클래스를 토글해주세요.
           -->
+            <i class="icon icon-select02"></i>
+            <ul class="selectbox" data-ui-id="select-university">
+              <li class="selectbox-item" data-ui-content="고려대학교">고려대학교</li>
+              <li class="selectbox-item" data-ui-content="서강대학교">서강대학교</li>
+              <li class="selectbox-item" data-ui-content="연세대학교">연세대학교</li>
+              <li class="selectbox-item" data-ui-content="인천대학교">인천대학교</li>
+              <li class="selectbox-item" data-ui-content="POSTECH">POSTECH</li>
+              <li class="selectbox-item" data-ui-content="대학교111">대학교111</li>
+              <li class="selectbox-item" data-ui-content="대학교222">대학교222</li>
+            </ul>
           </div>
-          <div class="input-item">
-            <p class="input-title">비밀번호 (영문, 숫자, 특수문자 6~15자)</p>
-            <input type="password" placeholder="비밀번호를 입력하세요." class="input-style02" />
-            <p class="error-style01 login-area-error active">영문, 숫자, 특수문자 포함 6~15자로 입력해주세요.</p>
-            <!-- 
-              [전달사항]
-              오류 발생 시 login-area-error에 active 클래스를 추가하고, input field에 focus되면 active 클래스를 제거해 주세요.
-            -->
-          </div>
-          <div class="input-item disable">
-            <!-- 
+        </div>
+        <div class="input-item">
+          <p class="input-title">이메일</p>
+          <input type="email" placeholder="이메일을 입력하세요." class="input-style02 input-email" value="username1234" />
+          <p class="login-area-email-info active">@ postech.ac.kr</p>
+          <p class="error-style01 login-area-error">정확한 이메일 주소를 입력해주세요.</p>
+          <!-- 
             [전달사항]
-            input-item 활성화시에는 disable 클래스를 제거하고
-            아래 input의 disabled 속성을 제거해주세요.
-            -->
-            <p class="input-title">비밀번호 확인</p>
-            <input type="password" placeholder="비밀번호를 재입력하세요." class="input-style02" disabled/>
-            <p class="error-style01 login-area-error">비밀번호가 일치하지 않습니다.</p>
-          </div>
+            - 사용자가 학교 선택 시 .login-area-email-info에 해당하는 학교 이메일을 넣어주세요.
+            - .login-area-email-info에 active 클래스가 있으면 글자가 보입니다.
+            - 
+          -->
+        </div>
+        <div class="input-item">
+          <p class="input-title">비밀번호</p>
+          <input type="password" placeholder="비밀번호를 입력하세요." class="input-style02" value="1234" />
+          <p class="error-style01 login-area-error">영문, 숫자, 특수문자 포함 6~15자로 입력해주세요.
+          </p>
+          <!-- 
+            [전달사항]
+            오류 발생 시 login-area-error에 에러 메시지를 넣어주세요.
+          -->
+        </div>
 
-          <div class="button-wrap">
-            <button class="button-style02 disable">이메일 인증</button>
-          </div>
-        </form>
-
-      </div>
+        <div class="button-wrap">
+          <button class="button-style01">로그인</button>
+          <!-- 
+            [전달사항]
+            버튼 활성화 시 disabled 속성을 제거해 주세요.
+          -->
+          <button class="button-style03">회원가입</button>
+        </div>
+    </form>
     </div>
 
-    <div class="login-univ-logo">
+    <!-- <div class="login-univ-logo">
       (University Logo)
-    </div>
-    <!-- 
-      TODO: 학교 로고 미정
-    -->
+    </div> -->
+    <!-- TODO: 포스텍 로고 삽입?? -->
+
   </div>
 </body>

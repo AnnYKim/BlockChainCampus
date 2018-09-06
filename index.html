@@ -9,7 +9,7 @@
     <meta name="description" content="File List | BC WebApp">
     <meta name="author" content="NY KIM">
 
-    <title>File List | BC WebApp</title>
+    <title>File List | Blockchain Campus WebApp</title>
 
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
     <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
@@ -41,6 +41,8 @@
             box-sizing: border-box;
             padding: 20px;
             min-width: 800px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         caption {
@@ -140,16 +142,37 @@
 
         .update {
             display: inline-block;
-            margin: 14px 0 30px 0;
-            padding: 14px;
+            margin: 18px 0 30px 0;
+            padding: 18px 26px;
             text-align: left;
             font-weight: bold;
-            font-size: 1.8rem;
-            border: 1px solid #aaa;
+            font-size: 1.9rem;
+            border: 1px solid #888;
+            background: #fff;
+        }
+
+        .update small {
+            display: block;
+            margin-top: 4px;
+            font-size: 70%;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .update .version1 {
+            display: inline-block;
+            width: 20px;
+            height: 10px;
+            background-color: rgba(255, 213, 213, 0.5);
+        }
+
+        .rmks {
+            font-size: 1.2rem;
+            font-weight: 400;
         }
 
         .borderTop {
-            border-top: 2px solid #e0e0e0;
+            border-top: 2px solid #e4e4e4;
         }
 
         .borderTop2 {
@@ -176,6 +199,15 @@
             .rmks {
                 display: none;
             }
+
+        }
+
+        .new td {
+            background-color: rgba(255, 213, 213, 0.3);
+        }
+
+        .new td[rowspan] {
+            background-color: #fff;
         }
     </style>
 
@@ -185,12 +217,12 @@
 <body>
     <div id="wrap">
         <h1>nykim@nykim.net</h1>
-        <p class="update">[ BC WebApp / ] 2018-08-22</p>
+        <p class="update">Blockchain Campus WebApp [ver.1]<br><small>Last Update: 2018-09-05</small></p>
 
         <table>
             <colgroup>
-                <col width="140px" />
-                <col width="180px" />
+                <col width="130px" />
+                <col width="170px" />
                 <col/>
                 <col/>
             </colgroup>
@@ -206,7 +238,6 @@
 
             </thead>
             <tbody>
-
                 <tr>
                     <td rowspan="5">
                         <strong>Login</strong>
