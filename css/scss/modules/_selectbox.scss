@@ -31,7 +31,6 @@
   .selectbox-item {
     margin-top: 2px;
     height: 3.8rem;
-    padding: 0 1.1rem;
     line-height: 3.8rem;
     font-size: 1.4rem;
     color: $color-navy;
@@ -41,6 +40,13 @@
 
     &:last-child {
       border-bottom: none;
+    }
+
+    a {
+      padding: 0 1.1rem;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
   }
 }

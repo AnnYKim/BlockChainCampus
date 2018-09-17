@@ -151,15 +151,23 @@
       }
 
       .value {
+        position: relative;
+        padding-left: 2.7rem;
         font-size: 2rem;
         font-weight: $fw-m;
         color: #000;
 
         &:before {
-          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: block;
           width: 2rem;
           height: 2rem;
           content: "";
+          background-size: 100%;
+          background-repeat: no-repeat;
+          @include transform(translateY(-50%));
         }
       }
 
@@ -182,7 +190,7 @@
       .type-in {
         //입금인 경우
         .value:before {
-          content: "+";
+          background-image: icon(wallet-details-in, #000);
         }
         .label {
           margin-left: 0.6rem;
@@ -194,7 +202,7 @@
       .type-out {
         //출금인 경우
         .value:before {
-          content: "-";
+          background-image: icon(wallet-details-out, #000);
         }
         .label {
           margin-left: 0.6rem;
@@ -236,7 +244,8 @@
   }
 
   .add-wallet-text {
-    margin-top: 4rem;
+    display: block;
+    // margin-top: 4rem;
     font-size: 1.8rem;
     font-weight: $fw-m;
     text-align: center;
@@ -246,7 +255,8 @@
       width: 6.4rem;
       height: 6.4rem;
       margin: 1.3rem auto 0;
-      background: pink;
+      background-image: icon(wallet-add, #000);
+      background-size: 100%;
       content: "";
     }
   }

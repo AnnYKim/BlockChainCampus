@@ -27,7 +27,9 @@
       left: 1rem;
       width: 4rem;
       height: 4rem;
-      outline: 2px solid red;
+      background-image: icon(close, #2C496A);
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
 
     .title {
@@ -44,7 +46,8 @@
         width: 15rem;
         height: 15rem;
         margin: 3.5rem auto;
-        background-color: pink;
+        @include bgi("login/deco-fingerprint-1");
+        background-size: 100%;
         content: "";
       }
     }
